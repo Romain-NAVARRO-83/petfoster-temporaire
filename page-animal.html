@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page animal</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+<header>
+    header
+</header>
+
+<body>
+    <h1>Nom animal</h1>
+    <section>
+        <div class="slider-for">
+            <div>photo 1</div>
+            <div>photo 2</div>
+            <div>photo 3</div>
+            <div>photo 4</div>
+            <div>photo 5</div>
+            <div>photo 6</div>
+        </div>
+        <div class="slider-nav">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </section>
+    <section>
+        <ul>
+            <li>Espèce</li>
+            <li>Race</li>
+            <li>Sexe</li>
+            <li>Age</li>
+            <li>Localisation</li>
+        </ul>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, maxime impedit at aut expedita itaque
+            error modi eaque totam, pariatur nulla nihil. Corrupti aliquam adipisci autem doloribus quibusdam assumenda
+            illo?</p>
+    </section>
+    <section>
+        <h2>Présentation longue</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad nesciunt assumenda iste tenetur qui tempora, hic
+            maxime fugiat velit beatae deleniti. Nobis reprehenderit praesentium quia qui quam similique aut impedit
+            ipsa, rerum, molestiae possimus quae saepe aliquam quos deserunt corrupti? Aut iure in cum ipsam ducimus?
+            Harum sequi excepturi veniam repellat aliquid quos ipsa assumenda suscipit sit, in dolorem provident minima
+            officiis. Nisi nihil veniam voluptatibus. Recusandae doloremque cum obcaecati nobis explicabo voluptatem
+            culpa aliquid ipsum natus sequi vel fugiat quaerat repellat suscipit, eligendi provident tenetur saepe eum.
+            Eveniet suscipit cum saepe quaerat recusandae molestiae neque eos? Iure, facilis obcaecati.</p>
+    </section>
+    <section>
+        santé
+    </section>
+    <section>
+        <div>Adresse</div>
+        <div>Map</div>
+        <div>
+            <button class="js-modal-trigger" data-target="modal-js-example">
+                Open JS example modal
+            </button>
+            <button>Demande</button>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <div class="modal" id="modal-js-example">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+            </section>
+            <footer class="modal-card-foot">
+                <div class="buttons">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button">Cancel</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav',
+            dots: false,
+            navigation: false
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            centerMode: true,
+            focusOnSelect: true
+        });
+
+    </script>
+
+</body>
+
+</html>
