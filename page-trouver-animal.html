@@ -4,73 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page animal</title>
+    <title>Page trouver un animal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="petfoster.css">
 </head>
 <header>
     header
 </header>
 
-<body>
-    <h1>Trouver un animal</h1>
-    <section>
-        <h2>Affinez votre recherche</h2>
-        <form action="" class="card">
-            <div>
-                <label for="species">Espèce</label>
-                <div class="select">
+<body class="light-theme">
+    <div>
+        <h1>Trouver un animal</h1>
+    </div>
+    <section class="section">
+        <div class="container card card-content">
+            <h2 class="title is-2">Affinez votre recherche</h2>
+            <form action="" class="columns">
 
-                    <select name="species" id="species">
-                        <option>Toutes</option>
-                        <option>Chien</option>
-                        <option>Chat</option>
-                    </select>
+                <div class="column is-one-third">
+                    <label for="species">Espèce</label>
+                    <div class="select">
+
+                        <select name="species" id="species">
+                            <option>Toutes</option>
+                            <option>Chien</option>
+                            <option>Chat</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <label for="age">Age</label>
-                <div class="select">
+                <div class="column is-one-third">
+                    <label for="age">Age</label>
+                    <div class="select">
 
-                    <select name="age" id="age">
-                        <option>Moins d'un an</option>
-                        <option>Entre un et trois ans</option>
-                        <option>Entre trois et 6 ans</option>
-                        <option>Plus de 6 ans</option>
-                    </select>
+                        <select name="age" id="age">
+                            <option>Moins d'un an</option>
+                            <option>Entre un et trois ans</option>
+                            <option>Entre trois et 6 ans</option>
+                            <option>Plus de 6 ans</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <label for="age">Sexe</label>
-                <div class="select">
+                <div class="column is-one-third">
+                    <label for="sexe">Sexe</label>
+                    <div class="select">
 
-                    <select name="sexe" id="sexe">
-                        <option>Tous</option>
-                        <option>Mâle</option>
-                        <option>Femelle</option>
-                    </select>
+                        <select name="sexe" id="sexe">
+                            <option>Tous</option>
+                            <option>Mâle</option>
+                            <option>Femell
+                            <option>Mâle</option>
+                            <option>Femelle</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-        </form>
+            </form>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container columns">
+
+            <div class="column is-full-mobile is-full-tablet is-half-desktop">
+                <!-- Carte animal -->
+                <article class="card card-content columns">
+                    <picture>
+                        <img src="#" alt="image animal">
+                    </picture>
+                    <div>
+                        <span>Nom animal</span>
+                        <span>Espèce</span>
+                        <span>Age</span>
+                        <span>Sexe</span>
+                    </div>
+                    <div>
+                        <button class="button is-link">Voir</button>
+                    </div>
+                </article>
+            </div>
+            <div class="column is-full-mobile is-full-tablet is-half-desktop">
+                map
+            </div>
+        </div>
+
     </section>
     <section>
-        map
-    </section>
-    <section>
-        <article class="card">
-            <picture>
-                <img src="#" alt="image animal">
-            </picture>
-            <div>
-                <span>Nom animal</span>
-                <span>Espèce</span>
-                <span>Age</span>
-                <span>Sexe</span>
-            </div>
-            <div>
-                <button class="button is-link">Voir</button>
-            </div>
-        </article>
+
     </section>
     <footer>
         footer

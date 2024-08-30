@@ -1,1 +1,9 @@
-h1 {}
+div:has(>h1) {
+    padding-top: 20vh;
+    background-color: #96ceb4;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, .5);
+    text-align: center;
+}
