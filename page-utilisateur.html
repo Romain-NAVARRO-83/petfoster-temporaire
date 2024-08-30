@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page animal</title>
+    <link rel="stylesheet" type="text/css" href="https//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+<header>
+    header
+</header>
+
+<body>
+    <h1>Nom utilisateur</h1>
+    <section>
+        <picture>
+            <img src="#" alt="profile picture" width="300">
+        </picture>
+        <ul>
+            <li>Nom</li>
+            <li>Prénom</li>
+            <li>Email</li>
+            <li>Tél</li>
+            <li>Pays</li>
+            <li>Code postal</li>
+            <li>Ville</li>
+            <li>Adresse</li>
+        </ul>
+        <h2>Description</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi recusandae, velit exercitationem corrupti
+                expedita laudantium adipisci ea, reprehenderit cupiditate nam aperiam maiores tempore qui ducimus rerum
+                molestiae id laboriosam eum.</p>
+        </div>
+        <button class="button is-primary js-modal-trigger" data-target="modal-js-example">Contacter ou modifier</button>
+    </section>
+    <section>
+        <h2>Profils d'accueil</h2>
+        <button class="button is-primary js-modal-trigger" data-target="modal-js-example">Ajouter</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Espèce</th>
+                    <th>Age</th>
+                    <th>Sexe</th>
+                    <th>Perimètre</th>
+                    <th>Suppr.</th>
+                </tr>
+            <tbody>
+                <tr>
+                    <td>Chat</td>
+                    <td>-5ans</td>
+                    <td>Mâle</td>
+                    <td>30 Km</td>
+                    <td><button class="button is-danger is-dark">Suppr</button></td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+    </section>
+    <footer>
+        footer
+    </footer>
+    <div class="modal" id="modal-js-example">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+            </section>
+            <footer class="modal-card-foot">
+                <div class="buttons">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button">Cancel</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="modal.js"></script>
+    <script>
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav',
+            dots: false,
+            navigation: false
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            centerMode: true,
+            focusOnSelect: true
+        });
+
+    </script>
+
+</body>
+
+</html>
