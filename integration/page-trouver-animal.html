@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page trouver un animal</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="/css/bulma-no-dark-mode.css">
+    <link rel="stylesheet" href="petfoster.css">
+</head>
+<header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="/img/petfoster-logo-grad.svg" alt="Logo Pet Foster" height="100" width="100">
+
+            </a>
+            <img src="/img/petfoster-title-grad.svg" alt="Titre Pet Foster" width="150">
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item">
+                    Voir les animaux
+                </a>
+
+                <a class="navbar-item">
+                    Mes demandes
+                </a>
+
+                <a class="navbar-item">
+                    Mes animaux
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Connexion
+                        </a>
+                        <a class="navbar-item is-selected">
+                            Mon compte
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div>
+        <h1 class="title">Trouver un animal</h1>
+    </div>
+    <section class="section">
+        <div class="container box">
+            <h2 class="title is-2">Affinez votre recherche</h2>
+            <form action="" class="columns">
+
+                <div class="column is-one-third">
+                    <label for="species">Espèce</label>
+                    <div class="select">
+
+                        <select name="species" id="species">
+                            <option>Toutes</option>
+                            <option>Chien</option>
+                            <option>Chat</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <label for="age">Age</label>
+                    <div class="select">
+
+                        <select name="age" id="age">
+                            <option>Moins d'un an</option>
+                            <option>Entre un et trois ans</option>
+                            <option>Entre trois et 6 ans</option>
+                            <option>Plus de 6 ans</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <label for="sexe">Sexe</label>
+                    <div class="select">
+
+                        <select name="sexe" id="sexe">
+                            <option>Tous</option>
+                            <option>Mâle</option>
+                            <option>Femell
+                            <option>Mâle</option>
+                            <option>Femelle</option>
+                        </select>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container columns">
+
+            <div class="column is-full-mobile is-full-tablet is-half-desktop">
+                <!-- Carte animal -->
+                <article class="box columns">
+                    <picture class="column">
+                        <img src="#" alt="image animal">
+                    </picture>
+                    <div class="column">
+                        <span>Nom animal</span>
+                        <span>Espèce</span>
+                        <span>Age</span>
+                        <span>Sexe</span>
+                    </div>
+                    <div class="column">
+                        <button class="button is-link">Voir</button>
+                    </div>
+                </article>
+            </div>
+            <div id="map" style="height:500px" class="column is-full-mobile is-full-tablet is-half-desktop">
+                map
+            </div>
+        </div>
+
+    </section>
+    <section>
+
+    </section>
+    <footer class="footer">
+
+        <div class="content columns">
+
+            <div class="column is-one-third-desktop">
+
+                <figure class="image is-128x128 is-inline-block">
+                    <img src="/img/petfoster-logo-grad.svg" alt="Logo" width="75">
+                </figure>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, nulla.</p>
+
+            </div>
+
+            <ul class="column">
+                <li><a href="#">Qui sommes-nous ?</a></li>
+                <li><a href="#">Accessibilité</a></li>
+                <li><a href="#">Nous contacter</a></li>
+                <li><a href="#">Vie privée / cookies</a></li>
+            </ul>
+
+
+        </div>
+
+    </footer>
+    <script src="modal.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([43.3091, 1.3056], 13); // Coordinates of Saint-Sulpice-sur-Lèze
+
+        // Set up the OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Optional: Add a marker at the center
+        L.marker([43.3091, 1.3056]).addTo(map)
+            .bindPopup('Saint-Sulpice-sur-Lèze, France')
+            .openPopup();
+    </script>
+
+
+</body>
+
+</html>
