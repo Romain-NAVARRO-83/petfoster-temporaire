@@ -1,69 +1,56 @@
 import {  NavLink } from 'react-router-dom';
+import { Navbar, Image, Dropdown } from 'react-bulma-components';
 function Header() {
 
 
     return (
         <header>
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div className="navbar-brand">
-                <a className="navbar-item" href="/">
-                    <img src="/img/vector/petfoster-logo-grad.svg" alt="Logo Pet Foster" height="100" width="100" />
-    
-                </a>
-                <img src="/img/vector/petfoster-title-grad.svg" alt="Titre Pet Foster" width="150" />
-    
-                <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-    
-            <div id="navbarBasicExample" className="navbar-menu">
-                <div className="navbar-end">
-                <NavLink 
-              to="/trouver-animal" 
-              exact 
-              className="navbar-item"
-            >
-              Voir les animaux
-            </NavLink>
-            <NavLink 
-              to="/mes-demandes" 
-              exact 
-              className="navbar-item"
-            >
-              Mes demandes
-            </NavLink>
-            <NavLink 
-              to="/mes-animaux" 
-              exact 
-              className="navbar-item"
-            >
-              Mes animaux
-            </NavLink>
+        <Navbar role="navigation" aria-label="main navigation">
+      {/* <Container> */}
+        <Navbar.Brand>
+          <Navbar.Item href="/">
+            <Image src="/img/vector/petfoster-logo-grad.svg" alt="Logo Pet Foster" size={64} />
+          </Navbar.Item>
+          <Navbar.Item>
+            <Image src="/img/vector/petfoster-title-grad.svg" alt="Titre Pet Foster" />
+          </Navbar.Item>
+          <Navbar.Burger aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
+        </Navbar.Brand>
 
-    
-                    <div className="navbar-item has-dropdown is-hoverable">
-                        <a className="navbar-link">
-                            More
-                        </a>
-    
-                        <div className="navbar-dropdown">
-                            <a className="navbar-item">
-                                Connexion
-                            </a>
-                            <a className="navbar-item is-selected">
-                                Mon compte
-                            </a>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-        </nav>
+        <Navbar.Menu id="navbarBasicExample">
+          <Navbar.Container align="right">
+            <Navbar.Item>
+              <NavLink to="/trouver-animal" >
+                Voir les animaux
+              </NavLink>
+            </Navbar.Item>
+            <Navbar.Item>
+              <NavLink to="/mes-demandes" >
+                Mes demandes
+              </NavLink>
+            </Navbar.Item>
+            <Navbar.Item>
+              <NavLink to="/mes-animaux" >
+                Mes animaux
+              </NavLink>
+            </Navbar.Item>
+            <Navbar.Item hoverable>
+              <Dropdown hoverable>
+                <Dropdown.Item value="more" renderAs="button">
+                  More
+                </Dropdown.Item>
+                <Dropdown.Item value="connexion">
+                  Connexion
+                </Dropdown.Item>
+                <Dropdown.Item value="mon-compte">
+                  Mon compte
+                </Dropdown.Item>
+              </Dropdown>
+            </Navbar.Item>
+          </Navbar.Container>
+        </Navbar.Menu>
+      {/* </Container> */}
+    </Navbar>
     </header>
     )
   }

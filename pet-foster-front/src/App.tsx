@@ -3,6 +3,16 @@ import Header from "./components/Header"
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import TrouverAnimal from "./components/pages/TrouverAnimal";
+import Error404 from "./components/pages/404";
+import Accueil from "./components/pages/Accueil";
+import Information from "./components/pages/Information";
+import PolitiqueDeConfidentialite from "./components/pages/PolitiqueDeConfidentialite.";
+import MesAnimaux from "./components/pages/MesAnimaux";
+import MesDemandes from "./components/pages/MesDemandes";
+import Contact from "./components/pages/Contact";
+import ProfilAnimal from "./components/pages/ProfilAnimal";
+import ProfilUtilisateur from "./components/pages/ProfilUtilisateur";
+import Connexion from "./components/pages/Connexion";
 
 function App() {
 
@@ -13,15 +23,17 @@ function App() {
     <Header />
     
     <Routes>
-        <Route path="/" element={<p>accueil</p>} />
-        <Route path="/information" element={<p>information</p>} />
-        <Route path="/politique-de-confidentialite" element={<p>Politique de conf</p>} />
-        <Route path="/contact" element={<p>contact</p>} />
-        <Route path="/mes-animaux" element={<p>mes animaux</p>} />
-        <Route path="/mes-demandes" element={<p>mes demandes</p>} />
-        <Route path="/trouver-animal" element={<TrouverAnimal />} />
-        <Route path="/profil-animal" element={<p>profil animal</p>} />
-        <Route path="/connexion" element={<p>connexion / inscription</p>} />
+        <Route path="/" element={< Accueil />} />
+        <Route path="/information" element={< Information />} />
+        <Route path="/politique-de-confidentialite" element={< PolitiqueDeConfidentialite />} />
+        <Route path="/contact" element={< Contact />} />
+        <Route path="/mes-animaux" element={< MesAnimaux />} />
+        <Route path="/mes-demandes" element={< MesDemandes />} />
+        <Route path="/trouver-animal" element={< TrouverAnimal />} />
+        <Route path="/profil-animal" element={< ProfilAnimal />} />
+        <Route path="/profil" element={< ProfilUtilisateur />} />
+        <Route path="/connexion" element={< Connexion />} />
+        <Route path="*" element={< Error404 />} />
       </Routes>
     </Router>
     
