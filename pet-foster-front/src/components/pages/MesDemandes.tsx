@@ -1,10 +1,12 @@
+import { Heading } from "react-bulma-components";
+
 function MesDemandes() {
 
 
     return (
        <main>
         <div>
-        <h1 className="title">Mes demandes</h1>
+        <Heading>Mes demandes</Heading>
     </div>
     
         </main>
