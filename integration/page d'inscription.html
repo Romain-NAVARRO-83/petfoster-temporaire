@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+
+    <header>
+        
+    </header>
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="title">Inscription</h2>
+
+            <form action="/submit_registration" method="post">
+
+                <div class="field">
+
+                    <label class="label" for="nom">Nom <span class="has-text-danger">*</span> :</label>
+                    
+                    <div class="control">
+                        <input class="input" type="text" id="nom" name="nom" required>
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label" for="email">Email <span class="has-text-danger">*</span> :</label>
+
+                    <div class="control">
+                        <input class="input" type="email" id="email" name="email" required>
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label" for="password">Mot de passe <span class="has-text-danger">*</span> :</label>
+
+                    <div class="control">
+                        <input class="input" type="password" id="password" name="password" required>
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label" for="confirm_password">Confirmer le mot de passe <span class="has-text-danger">*</span> :</label>
+
+                    <div class="control">
+                        <input class="input" type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label" for="pays">Pays <span class="has-text-danger">*</span> :</label>
+
+                    <div class="control">
+                        <input class="input" type="text" id="pays" name="pays">
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label" for="ville">Ville <span class="has-text-danger">*</span>:</label>
+
+                    <div class="control">
+                        <input class="input" type="text" id="ville" name="ville">
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label" for="code_postal">Code postal <span class="has-text-danger">*</span> :</label>
+
+                    <div class="control">
+                        <input class="input" type="text" id="code_postal" name="code_postal">
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label" for="adresse">Adresse <span class="has-text-danger">*</span> :</label>
+
+                    <div class="control">
+                        <input class="input" type="text" id="adresse" name="adresse">
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label" for="telephone">Téléphone :</label>
+
+                    <div class="control">
+                        <input class="input" type="tel" id="telephone" name="telephone">
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <div class="control">
+
+                        <label class="checkbox">
+                            <input type="checkbox" id="conditions" name="conditions" required>
+                            J'accepte les <a href="#">conditions générales <span class="has-text-danger">*</span></a>
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <div class="control">
+                        <button class="button is-primary" type="submit">S'inscrire</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
