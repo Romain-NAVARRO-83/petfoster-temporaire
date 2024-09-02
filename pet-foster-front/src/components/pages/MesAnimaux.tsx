@@ -1,10 +1,12 @@
+import { Heading } from "react-bulma-components";
+
 function MesAnimaux() {
 
 
     return (
        <main>
         <div>
-        <h1 className="title">Mes animaux</h1>
+        <Heading>Mes animaux</Heading>
     </div>
     
         </main>

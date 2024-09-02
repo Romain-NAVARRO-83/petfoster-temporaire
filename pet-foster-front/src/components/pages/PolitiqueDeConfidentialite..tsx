@@ -1,10 +1,12 @@
+import { Heading } from "react-bulma-components";
+
 function PolitiqueDeConfidentialite() {
 
 
     return (
        <main>
         <div>
-        <h1 className="title">Politique de confidentialité</h1>
+        <Heading>Politique de confidentialité</Heading>
     </div>
     
         </main>
