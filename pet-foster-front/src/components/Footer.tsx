@@ -17,10 +17,10 @@ function Footer() {
             </div>
 
             <ul className="column">
-                <li><a href="#">Qui sommes-nous ?</a></li>
+                <li><a href="/information">A propos</a></li>
                 <li><a href="#">Accessibilité</a></li>
-                <li><a href="#">Nous contacter</a></li>
-                <li><a href="#">Vie privée / cookies</a></li>
+                <li><a href="/contact">Nous contacter</a></li>
+                <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
             </ul>
 
 

@@ -13,22 +13,11 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/src/assets/js/header.js"></script>
+
 </body>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script defer>
-  // Initialize the map
-  var map = L.map('map').setView([43.3091, 1.3056], 13); // Coordinates of Saint-Sulpice-sur-Lèze
 
-  // Set up the OpenStreetMap tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  // Optional: Add a marker at the center
-  L.marker([43.3091, 1.3056]).addTo(map)
-    .bindPopup('Saint-Sulpice-sur-Lèze, France')
-    .openPopup();
-</script>
 
 </html>
