@@ -1,15 +1,58 @@
+import { Heading, Dropdown, DropdownItem, Icon } from "react-bulma-components";
+
+
+
 function TrouverAnimal() {
 
 
     return (
         <main>
             <div>
-                <h1 className="title">Trouver un animal</h1>
+                <Heading>Trouver un animal</Heading>
             </div>
             <section className="section">
                 <div className="container box">
-                    <h2 className="title is-2">Affinez votre recherche</h2>
-                    <form action="" className="columns">
+                    <Heading subtitle>Affinez votre recherche</Heading>              
+                        <Dropdown
+                            closeOnSelect={false}
+                            color=""
+                            icon={<Icon><i aria-hidden="true" className="fas fa-angle-down"/></Icon>}
+                            label="Espèce"
+                        >
+                            <DropdownItem
+                            renderAs="a"
+                            value="item"
+                            >
+                            Toutes
+                            </DropdownItem>
+                            <DropdownItem
+                            renderAs="a"
+                            value="other"
+                            >
+                           Chien
+                            </DropdownItem>
+                            <DropdownItem
+                            renderAs="a"
+                            value="active"
+                            >
+                            Chat
+                            </DropdownItem>
+                            <DropdownItem
+                            renderAs="a"
+                            value="other 2"
+                            >
+                            Other Dropdown item
+                            </DropdownItem>
+                            <DropdownDivider />
+                            <DropdownItem
+                            renderAs="a"
+                            value="divider"
+                            >
+                            After divider
+                            </DropdownItem>
+                        </Dropdown>
+                     
+                    {/* <form action="" className="columns">
 
                         <div className="column is-one-third">
                             <label htmlFor="species">Espèce</label>
@@ -46,7 +89,7 @@ function TrouverAnimal() {
                             </div>
                         </div>
 
-                    </form>
+                    </form> */}
                 </div>
             </section>
             <section className="section">
